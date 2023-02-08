@@ -33,9 +33,18 @@ jobs:
         # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
         uses: wangyucode/sftp-upload-action@v1.1
         with:
-          host: ${{ secrets.SERVER_IP }}  #你的nginx服务器公网ip
-          port: ${{ secrets.SERVER_PORT }} #你的nginx服务器ssh端口
-          username: ${{ secrets.USERNAME }} #你的nginx服务器用户名
-          password: ${{ secrets.PASSWORD }} #你的nginx服务器密码
-          localDir: "docs/.vitepress/dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
-          remoteDir: ${{ secrets.SERVER_DESTINATION }} #你要把你build好的文件夹放到nginx服务器上的什么位置
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          localDir: "docs/.vitepress/dist"
+          remoteDir: ${{ secrets.SERVER_DESTINATION }}
+      - name: restart nginx.service
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script:
+            systemctl restart nginx
