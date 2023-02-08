@@ -39,7 +39,7 @@ module.exports = {
                         link: '/study/cplus/'
                     },
                     {
-                        text: 'Other',
+                        text: '开发小记',
                         link: '/study/other/'
                     }
                 ]
@@ -48,7 +48,7 @@ module.exports = {
         sidebar: {
             '/study/other/': [
                 {
-                    text: 'Other',
+                    text: '开发小记',
                     items: [
                         {text: 'Github Action 配置项目自动化部署至服务器', link: '/study/other/github-action'}
                     ]
