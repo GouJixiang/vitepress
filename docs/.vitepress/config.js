@@ -40,6 +40,7 @@ module.exports = {
                     },
                     {
                         text: 'Other',
+                        link: '/study/other/',
                         item: [
                             {
                                 text: 'Github Action 配置项目自动化部署至服务器',
