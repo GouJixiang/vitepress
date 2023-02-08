@@ -40,8 +40,11 @@ module.exports = {
                     },
                     {
                         text: 'Other',
-                        link: '/study/other/',
                         item: [
+                            {
+                              text: '前言',
+                              link: '/study/other/'
+                            },
                             {
                                 text: 'Github Action 配置项目自动化部署至服务器',
                                 link: '/study/other/github-action'
