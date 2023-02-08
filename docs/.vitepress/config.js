@@ -37,6 +37,10 @@ module.exports = {
                     {
                         text: 'C++',
                         link: '/study/cplus/'
+                    },
+                    {
+                        text: 'Other',
+                        link: '/study/other/'
                     }
                 ]
             },
