@@ -40,20 +40,21 @@ module.exports = {
                     },
                     {
                         text: 'Other',
-                        item: [
-                            {
-                              text: '前言',
-                              link: '/study/other/'
-                            },
-                            {
-                                text: 'Github Action 配置项目自动化部署至服务器',
-                                link: '/study/other/github-action'
-                            }
-                        ]
+                        link: '/study/other/'
                     }
                 ]
             },
         ],
+        sidebar: {
+            '/study/other/': [
+                {
+                    text: 'Other',
+                    items: [
+                        {text: 'Github Action 配置项目自动化部署至服务器', link: '/study/other/github-action'}
+                    ]
+                }
+            ]
+        },
         footer: {
             message: 'Released under the MIT License.',
             copyright: 'Copyright © 2019-present yangxy'
